@@ -36,4 +36,4 @@ def feed_animals(animals: Sequence[Animal]) -> int:
     total = 0
     for animal in animals:
         total += animal.feed()
-    return total
+    return sum(animal.feed() for animal in animals)
